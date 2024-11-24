@@ -28,14 +28,6 @@ Este proyecto consiste en la implementación de un sistema para gestionar estad�
 
 Las estadísticas se calculan en base a los datos generados durante las operaciones diarias del restaurante, lo que permite analizar la información de manera eficiente. El sistema también incluye una funcionalidad para exportar reportes y gráficos en diferentes formatos.
 
-## Requerimientos.
-- Generar reportes de ventas diarias, semanales y mensuales, desglosando por productos y categorías.
-- Mostrar estadísticas sobre los productos más vendidos y las mesas más utilizadas en el restaurante.
-- Generar reportes personalizados según el rango de fechas y las categorías solicitadas.
-- Producir gráficos visuales que resuman el rendimiento del restaurante, facilitando la interpretación de datos.
-- Permitir guardar los reportes en formatos digitales (PDF, Excel) para su uso posterior.
-- Mostrar el rendimiento de los empleados en términos de ventas y pedidos atendidos.
-
 ## Diagrama de Clases
 
 ![Evaluación2](https://github.com/user-attachments/assets/c79692fe-2562-4fd3-97a6-570c8b7d527c)
