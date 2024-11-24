@@ -16,6 +16,10 @@ Este proyecto fue desarrollado por un equipo colaborativo con el fin de aplicar 
 - **María Valarezo**
 - **Viviana Córdova**
 
+## Diagrama de Clases
+![Evaluación2](https://github.com/user-attachments/assets/c79692fe-2562-4fd3-97a6-570c8b7d527c)
+
+
 ## Estructura del proyecto
 
 El proyecto está compuesto por varias clases que interactúan entre sí para proporcionar la funcionalidad deseada. Entre las principales se incluyen:
