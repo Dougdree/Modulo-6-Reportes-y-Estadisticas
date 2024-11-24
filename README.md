@@ -1,4 +1,5 @@
 # Módulo de Reportes y Estadísticas
+![Diagrama_Módulo6](https://github.com/user-attachments/assets/144353df-65dc-4575-a397-f0fbc9fcbabc)
 
 Este módulo proporciona información sobre el desempeño del restaurante a través de reportes y estadísticas. Los reportes incluyen datos sobre las ventas diarias, productos más vendidos, mesas más utilizadas, ingresos generados, y el desempeño de los empleados. El sistema debe permitir generar reportes personalizados por rango de fechas y categorías específicas, como ventas por categoría de producto o por empleado. Además, se deben generar gráficos y tablas que faciliten la interpretación de los datos.
 
