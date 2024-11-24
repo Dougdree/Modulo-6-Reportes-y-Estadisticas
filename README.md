@@ -1,4 +1,19 @@
+
 # Módulo de Reportes y Estadísticas.
+
+# Módulo de Reportes y Estadísticas
+
+Este módulo proporciona información sobre el desempeño del restaurante a través de reportes y estadísticas. Los reportes incluyen datos sobre las ventas diarias, productos más vendidos, mesas más utilizadas, ingresos generados, y el desempeño de los empleados. El sistema debe permitir generar reportes personalizados por rango de fechas y categorías específicas, como ventas por categoría de producto o por empleado. Además, se deben generar gráficos y tablas que faciliten la interpretación de los datos.
+
+## Miembros del equipo
+
+- **Arelys Ajila**
+- **Douglas Carreño**
+- **Fabricio Ruiz**
+- **María Valarezo**
+- **Viviana Córdova**
+
+
 
 Este módulo proporciona información sobre el desempeño del restaurante a través de reportes y estadísticas. Los reportes incluyen datos sobre las ventas diarias, productos más vendidos, mesas más utilizadas, ingresos generados, y el desempeño de los empleados. El sistema debe permitir generar reportes personalizados por rango de fechas y categorías específicas, como ventas por categoría de producto o por empleado. Además, se deben generar gráficos y tablas que faciliten la interpretación de los datos.
 
@@ -20,13 +35,22 @@ Las estadísticas se calculan en base a los datos generados durante las operacio
 
 Este proyecto fue desarrollado por un equipo colaborativo con el fin de aplicar conceptos de programación orientada a objetos, manejo de bases de datos, y generación de reportes gráficos.
 
-## Miembros del equipo.
 
-- **Arelys Ajila**
-- **Douglas Carreño**
-- **Fabricio Ruiz**
-- **María Valarezo**
-- **Viviana Córdova**
+## Miembros del equipo.
+=======
+## Requerimientos.
+- Generar reportes de ventas diarias, semanales y mensuales, desglosando por productos y categorías.
+- Mostrar estadísticas sobre los productos más vendidos y las mesas más utilizadas en el restaurante.
+- Generar reportes personalizados según el rango de fechas y las categorías solicitadas.
+- Producir gráficos visuales que resuman el rendimiento del restaurante, facilitando la interpretación de datos.
+- Permitir guardar los reportes en formatos digitales (PDF, Excel) para su uso posterior.
+- Mostrar el rendimiento de los empleados en términos de ventas y pedidos atendidos.
+
+## Diagrama de Clases
+
+![Evaluación2](https://github.com/user-attachments/assets/c79692fe-2562-4fd3-97a6-570c8b7d527c)
+
+
 
 ## Estructura del proyecto
 
