@@ -36,6 +36,15 @@ Este proyecto fue desarrollado por un equipo colaborativo con el fin de aplicar 
 
 El proyecto está compuesto por varias clases que interactúan entre sí para proporcionar la funcionalidad deseada. Entre las principales se incluyen:
 
+- **[Asignación](Código/src/Asignacion.java)**: Es una clase intermedia que permite realizar asignaciones entre los objetos de la clase Factura y la Interfaz IReporte
+- **[Factura](Código/src/Factura.java)**: Contiene la información general de la factura como un número para identificarla, los descuentos e impuestos aplicados, la fecha de emisión y monto total.
+- **[ItemFactura](Código/src/ItemFactura.java)**: Es una clase que compone a Factura, incluye la información de un producto individual contenido en la factura, como el subtotal a pagar y la cantidad de productos que se vendieron.
+- **[Mesa](Código/src/Mesa.java)**: Representa cada mesa que existe en el restaurante. Con esta clase se puede saber la cantidad de uso que una mesa ha tenido y hace uso de un código para identificarlas.
+- **[Persona](Código/src/Persona.java)**: Es una clase abstracta que permite establecer los atributos básicos como nombre e identificación que serán heredados a mesero.
+- **[Mesero](Código/src/Mesero.java)**: Se trata de una clase para identificar a los trabajadores que se desempeñen como meseros en el restaurante. Proporciona información del número de pedidos que atendió cada mesero.
+
+
+
 - **Estadísticas**: Clases que calculan las estadísticas de ventas, meseros, productos y mesas.
 - **Reportes**: Implementación de reportes que permiten visualizar y exportar la información en diversos formatos.
 - **Gráficos**: Generación de gráficos para visualizar las estadísticas.
