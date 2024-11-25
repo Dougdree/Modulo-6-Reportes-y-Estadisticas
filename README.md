@@ -1,4 +1,6 @@
-# Módulo de Reportes y Estadísticas
+
+# Módulo de Reportes y Estadísticas.
+
 
 Este módulo proporciona información sobre el desempeño del restaurante a través de reportes y estadísticas. Los reportes incluyen datos sobre las ventas diarias, productos más vendidos, mesas más utilizadas, ingresos generados, y el desempeño de los empleados. El sistema debe permitir generar reportes personalizados por rango de fechas y categorías específicas, como ventas por categoría de producto o por empleado. Además, se deben generar gráficos y tablas que faciliten la interpretación de los datos.
 
@@ -10,16 +12,8 @@ Este módulo proporciona información sobre el desempeño del restaurante a trav
 - **María Valarezo**
 - **Viviana Córdova**
 
-
-## Introducción
-
-Este proyecto consiste en la implementación de un sistema para gestionar estadísticas relacionadas con un restaurante. El objetivo principal es ofrecer una visión detallada de las ventas, los productos más vendidos, el rendimiento de los meseros y el uso de las mesas. Además, el sistema permite generar reportes y gráficos para facilitar la toma de decisiones estratégicas.
-
-Las estadísticas se calculan en base a los datos generados durante las operaciones diarias del restaurante, lo que permite analizar la información de manera eficiente. El sistema también incluye una funcionalidad para exportar reportes y gráficos en diferentes formatos.
-
-Este proyecto fue desarrollado por un equipo colaborativo con el fin de aplicar conceptos de programación orientada a objetos, manejo de bases de datos, y generación de reportes gráficos.
-
 ## Requerimientos.
+
 - Generar reportes de ventas diarias, semanales y mensuales, desglosando por productos y categorías.
 - Mostrar estadísticas sobre los productos más vendidos y las mesas más utilizadas en el restaurante.
 - Generar reportes personalizados según el rango de fechas y las categorías solicitadas.
@@ -27,9 +21,16 @@ Este proyecto fue desarrollado por un equipo colaborativo con el fin de aplicar 
 - Permitir guardar los reportes en formatos digitales (PDF, Excel) para su uso posterior.
 - Mostrar el rendimiento de los empleados en términos de ventas y pedidos atendidos.
 
+
+## Introducción.
+
+Este proyecto consiste en la implementación de un sistema para gestionar estadísticas relacionadas con un restaurante. El objetivo principal es ofrecer una visión detallada de las ventas, los productos más vendidos, el rendimiento de los meseros y el uso de las mesas. Además, el sistema permite generar reportes y gráficos para facilitar la toma de decisiones estratégicas.Fue desarrollado por un equipo colaborativo con el fin de aplicar conceptos de programación orientada a objetos, manejo de bases de datos, y generación de reportes gráficos.
+
+Las estadísticas se calculan en base a los datos generados durante las operaciones diarias del restaurante, lo que permite analizar la información de manera eficiente. El sistema también incluye una funcionalidad para exportar reportes y gráficos en diferentes formatos.
+
 ## Diagrama de Clases
 
-![Evaluación2](https://github.com/user-attachments/assets/c79692fe-2562-4fd3-97a6-570c8b7d527c)
+![Evaluación2](https://github.com/user-attachments/assets/0803083b-5766-4699-ac27-09d81cce362c)
 
 
 ## Estructura del proyecto
@@ -57,4 +58,5 @@ Este proyecto nos permitió aplicar conocimientos previos en programación orien
 Una de las lecciones más importantes fue entender la importancia de la organización del código y cómo una estructura bien definida puede facilitar la escalabilidad y el mantenimiento del sistema. También aprendimos a trabajar con gráficos y reportes, lo que añadió una capa de complejidad pero también permitió visualizar la información de manera efectiva.
 
 En el futuro, nos gustaría agregar más funcionalidades, como la integración con bases de datos para la gestión de la información, la posibilidad de agregar más tipos de reportes o gráficos y la optimización de la generación de reportes en formatos más avanzados, como PDFs interactivos.
+
 
