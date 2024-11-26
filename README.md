@@ -67,7 +67,7 @@ El proyecto está compuesto por varias clases que interactúan entre sí para pr
 
 **13. [Main](Código/src/Main.java)**: Contiene la configuración general del programa. Permite presentar en el terminal determinada información.
 
-**14. [Producto](Código/src/Producto.java)**: Contiene información más específica acerca del producto que se ha relacionado en la clase itemProducto, como nombre, precio, categoría y cantidad.
+**14. [Producto](Código/src/Producto.java)**: Contiene información más específica acerca del producto que se ha relacionado en la clase itemProducto, como nombre, precio y cantidad.
 
 **15. [Reporte](Código/src/Reporte.java)**: Esta clase implementa los métodos de la clase IReporte, pero permite generar reportes diarios, semanales o mensuales que estan implementados en un enumerador. Contiene un título y se relaciona con el gráfico generado en la clase Gráfico. Además, se puede exportar dependiendo del tipo de archivo que se especifica en un enumerador.
 
