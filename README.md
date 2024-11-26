@@ -59,7 +59,7 @@ El proyecto está compuesto por varias clases que interactúan entre sí para pr
 
 **9. [EstadisticaMesero](Código/src/EstadisticaMesero.java)**: Esta clase calcula el mejor mesero en base al número de pedidos atendidos, guarda el nombre de dicho empleado en el atributo mejorMesero.
 
-**10. [EstadisticaProducto](Código/src/EstadisticaProducto.java)**: Calcula el producto más vendido del restaurante y tambien por categoría. Almacena dichos datos en sus atributos.
+**10. [EstadisticaProducto](Código/src/EstadisticaProducto.java)**: Calcula el producto más vendido del restaurante.
 
 **11. [Grafico](Código/src/Grafico.java)**: Permite generar un gráfico de tipo pastel con un título referente a la información recibida de la clase Reporte.
 
