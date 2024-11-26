@@ -30,7 +30,8 @@ Las estadísticas se calculan en base a los datos generados durante las operacio
 
 ## Diagrama de Clases
 
-![Evaluación2](https://github.com/user-attachments/assets/0803083b-5766-4699-ac27-09d81cce362c)
+![Evaluación2](https://github.com/user-attachments/assets/c9739dec-9dd6-4482-a41c-2abeacef954e)
+
 
 
 ## Estructura del proyecto
