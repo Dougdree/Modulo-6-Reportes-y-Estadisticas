@@ -7,7 +7,7 @@ public class Producto {
     private int cantidad;    // Cantidad disponible del producto
 
     // Constructor de Producto
-    public Producto(String nombre, float precio) {
+    public Producto(String nombre, float precio, int i) {
         this.nombre = nombre;
         this.precio = precio;
         this.categoria = categoria;

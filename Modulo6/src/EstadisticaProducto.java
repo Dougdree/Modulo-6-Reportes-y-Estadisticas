@@ -12,13 +12,12 @@ public class EstadisticaProducto extends Estadistica {
     @Override
     public void calcularEstadistica() {
         System.out.println("Calculando estadísticas para los productos...");
-        // Aquí deberías incluir la lógica real para calcular el producto más vendido
         // Ejemplo de cómo se puede calcular (esto es solo un ejemplo)
         this.productoMasVendido = "Pizza"; // Este valor debe calcularse dinámicamente
     }
 
     // Método para calcular el producto más vendido, recibido nombre, cantidad y fecha
-    // Este método es un ejemplo, si deseas hacer otro tipo de cálculo, puedes ajustarlo
+    // Este método es un ejemplo
     public String calcularMasVendido(String nombre, int cantidad, String fecha) {
         return "Producto: " + nombre + ", Cantidad vendida: " + cantidad + ", Fecha: " + fecha;
     }
@@ -28,7 +27,5 @@ public class EstadisticaProducto extends Estadistica {
         return productoMasVendido;
     }
 }
-
-
 
 

@@ -1,12 +1,13 @@
-// Clase que representa una asignación entre dos elementos.
+import java.util.Date;  // Importar la clase Date para manejar fechas.
+
 public class Asignacion {
 
     private String codigoAsignacion;  // Código único de la asignación.
     private String descripcion;      // Descripción de la asignación.
-    private String fecha;            // Fecha en la que se realiza la asignación.
+    private Date fecha;              // Fecha en la que se realiza la asignación.
 
     // Constructor que inicializa los atributos de la asignación.
-    public Asignacion(String codigoAsignacion, String descripcion, String fecha) {
+    public Asignacion(String codigoAsignacion, String descripcion, Date fecha) {
         this.codigoAsignacion = codigoAsignacion;
         this.descripcion = descripcion;
         this.fecha = fecha;
@@ -29,11 +30,11 @@ public class Asignacion {
         this.descripcion = descripcion;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
@@ -46,4 +47,5 @@ public class Asignacion {
         System.out.println();  // Agregar espacio para mejor visualización.
     }
 }
+
 

@@ -30,12 +30,16 @@ Las estadísticas se calculan en base a los datos generados durante las operacio
 
 ## Diagrama de Clases
 
-![Evaluación2](https://github.com/user-attachments/assets/7eed451c-0935-4021-9854-6f76edfaa8d9)
+
+![Evaluación2](https://github.com/user-attachments/assets/b61f3161-c330-49e2-b7ab-81b48f81a17d)
 
 
 ## Estructura del proyecto
 
 El proyecto está compuesto por varias clases que interactúan entre sí para proporcionar la funcionalidad deseada. Entre las principales se incluyen:
+
+
+**1. [Asignación](Modulo6/src/Asignacion.java)**: Es una clase intermedia que permite realizar asignaciones entre los objetos de la clase Factura y la Interfaz IReporte
 
 **1. [Asignación](Código/src/Asignacion.java)**: Es una clase intermedia que permite realizar asignaciones entre los objetos de la clase Factura y la Interfaz IReporte
 
@@ -73,19 +77,10 @@ El proyecto está compuesto por varias clases que interactúan entre sí para pr
 
 
 
-
-
-- **Estadísticas**: Clases que calculan las estadísticas de ventas, meseros, productos y mesas.
-- **Reportes**: Implementación de reportes que permiten visualizar y exportar la información en diversos formatos.
-- **Gráficos**: Generación de gráficos para visualizar las estadísticas.
-- **Factura y elementos asociados**: Gestión de los productos dentro de una factura.
-
 ## Reflexión del Proyecto
 
 Este proyecto nos permitió aplicar conocimientos previos en programación orientada a objetos, además de aprender cómo estructurar un sistema con una lógica empresarial clara y modular. A lo largo del desarrollo, enfrentamos diversos desafíos relacionados con la organización de clases y la correcta implementación de las estadísticas, pero aprendimos a abordarlos mediante la revisión y el trabajo en equipo.
 
-Una de las lecciones más importantes fue entender la importancia de la organización del código y cómo una estructura bien definida puede facilitar la escalabilidad y el mantenimiento del sistema. También aprendimos a trabajar con gráficos y reportes, lo que añadió una capa de complejidad pero también permitió visualizar la información de manera efectiva.
+Una de las lecciones más importantes fue entender la importancia de la organización del código y cómo una estructura bien definida puede facilitar la escalabilidad y el mantenimiento del sistema. También aprendimos a trabajar con gráficos y reportes, lo que añadió una capa de complejidad pero también permitió visualizar la información de manera efectiva. Además, se presentaron problemas al momento de codificar el diagrama de clases, por lo que fue necesario cambiar algunas relaciones de herencia, como la de estadística, generando una nueva clase que almacene métodos y atributos en común para que herede a las clases de estadísticas específicas. Para ello fue necesario tener presente el concepto de polimorfismo en java y la forma en que interactuan estas clases.
 
 En el futuro, nos gustaría agregar más funcionalidades, como la integración con bases de datos para la gestión de la información, la posibilidad de agregar más tipos de reportes o gráficos y la optimización de la generación de reportes en formatos más avanzados, como PDFs interactivos.
-
-

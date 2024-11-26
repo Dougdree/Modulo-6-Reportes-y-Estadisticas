@@ -2,11 +2,11 @@
 public interface IReporte {
 
     // Genera un resumen total de ventas, desglosado según sea necesario.
-    void generarVentasTotales();
+    public void generarVentasTotales();
 
     // Visualiza el gráfico relacionado con el reporte.
-    void visualizarGrafico();
+    public void visualizarReporte();
 
     // Exporta el gráfico en un formato específico, como PDF o imagen.
-    void exportarGrafico();
+    public void exportarReporte();
 }
