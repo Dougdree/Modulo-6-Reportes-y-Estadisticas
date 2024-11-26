@@ -46,43 +46,37 @@ El proyecto está compuesto por varias clases que interactúan entre sí para pr
 
 **4. [Mesa](Modulo6/src/Mesa.java)**: Representa cada mesa que existe en el restaurante. Con esta clase se puede saber la cantidad de uso que una mesa ha tenido y hace uso de un código para identificarlas.
 
-**5. [Persona](Código/src/Persona.java)**: Es una clase abstracta que permite establecer los atributos básicos como nombre e identificación que serán heredados a mesero.
+**5. [Persona](Modulo6/src/Persona.java)**: Es una clase abstracta que permite establecer los atributos básicos como nombre e identificación que serán heredados a mesero.
 
 **6. [Mesero](Modulo6/src/Mesero.java)**: Se trata de una clase para identificar a los trabajadores que se desempeñen como meseros en el restaurante. Proporciona información del número de pedidos que atendió cada mesero.
 
 **7. [Estadistica](Modulo6/src/EstadisticaProducto.java)**: Se trata de una clase abstracta que hereda a las clases EstadisticaMesa, EstadisticaMesero y EstadisticaProducto. 
 
-**8. [EstadisticaMesa](Modulo6/src/EstadisticaMesa.java)**: Esta clase calcula la mesa más usada y almacena el código de dicha mesa en el atributo mesaMasUsada.
+**8. [EstadisticaMesa](Modulo6/src/EstadisticaMesa.java)**: Esta clase calcula la mesa más usada.
 
-**9. [EstadisticaMesero](Modulo6/src/EstadisticaMesero.java)**: Esta clase calcula el mejor mesero en base al número de pedidos atendidos, guarda el nombre de dicho empleado en el atributo mejorMesero.
+**9. [EstadisticaMesero](Modulo6/src/EstadisticaMesero.java)**: Esta clase calcula el mejor mesero en base al número de pedidos atendidos.
 
-**10. [EstadisticaProducto](Modulo6/src/EstadisticaProducto.java)**: Calcula el producto más vendido del restaurante y tambien por categoría. Almacena dichos datos en sus atributos.
-
-**11. [Grafico](Modulo6/src/Grafico.java)**: Permite generar un gráfico de tipo pastel con un título referente a la información recibida de la clase Reporte.
+**10. [EstadisticaProducto](Modulo6/src/EstadisticaProducto.java)**: Calcula el producto más vendido del restaurante.
+**11. [Grafico](Modulo6/src/Grafico.java)**: Permite generar un gráfico de tipo pastel con un título referente a la información recibida de la clase Reporte. 
 
 **12. [IReporte](Modulo6/src/IReporte.java)**: Se trata de una Interface que integra los métodos para calcular las Ventas Totales, visualizar el reporte y exportar reporte. Interactua con la clase asignación para obtener los datos de las facturas.
 
 **13. [Main](Modulo6/src/Main.java)**: Contiene la configuración general del programa. Permite presentar en el terminal determinada información.
 
-**14. [Producto](Código/src/Producto.java)**: Contiene información más específica acerca del producto que se ha relacionado en la clase itemProducto, como nombre, precio, categoría y cantidad.
+**14. [Producto](Modulo6/src/Producto.java)**: Contiene información más específica acerca del producto que se ha relacionado en la clase itemProducto, como nombre, precio, categoría y cantidad.
 
-**15. [Reporte](Código/src/Reporte.java)**: Esta clase implementa los métodos de la clase IReporte, pero permite generar reportes diarios, semanales o mensuales que estan implementados en un enumerador. Contiene un título y se relaciona con el gráfico generado en la clase Gráfico. Además, se puede exportar dependiendo del tipo de archivo que se especifica en un enumerador.
+**15. [Reporte](Modulo6/src/Reporte.java)**: Esta clase implementa los métodos de la clase IReporte, pero permite generar reportes diarios, semanales o mensuales que estan implementados en un enumerador. Contiene un título y se relaciona con el gráfico generado en la clase Gráfico. Además, se puede exportar dependiendo del tipo de archivo que se especifica en un enumerador.
 
-**16. [TipoArchivo](Código/src/TipoArchivo.java)**: Se trata de un enumerador que contiene los tipos de reportes que se pueden generar. Existen 3 atributos: diario, semanal y mensual.
+**16. [TipoArchivo](Modulo6/src/TipoArchivo.java)**: Se trata de un enumerador que contiene los tipos de reportes que se pueden generar, los mismos pueden ser DIARIO, SEMANAL o MENSUAL.
 
-**17. [TipoReporte](Código/src/TipoReporte.java)**: Es un enumerador que especifica el formato en el cual se desea exportar el Reporte. Contiene los atributos PDF e IMAGEN
+**17. [TipoReporte](Modulo6/src/TipoReporte.java)**: Es un enumerador que especifica el formato en el cual se desea exportar el Reporte. Contiene los atributos PDF e IMAGEN
 
-
-- **Estadísticas**: Clases que calculan las estadísticas de ventas, meseros, productos y mesas.
-- **Reportes**: Implementación de reportes que permiten visualizar y exportar la información en diversos formatos.
-- **Gráficos**: Generación de gráficos para visualizar las estadísticas.
-- **Factura y elementos asociados**: Gestión de los productos dentro de una factura.
 
 ## Reflexión del Proyecto
 
 Este proyecto nos permitió aplicar conocimientos previos en programación orientada a objetos, además de aprender cómo estructurar un sistema con una lógica empresarial clara y modular. A lo largo del desarrollo, enfrentamos diversos desafíos relacionados con la organización de clases y la correcta implementación de las estadísticas, pero aprendimos a abordarlos mediante la revisión y el trabajo en equipo.
 
-Una de las lecciones más importantes fue entender la importancia de la organización del código y cómo una estructura bien definida puede facilitar la escalabilidad y el mantenimiento del sistema. También aprendimos a trabajar con gráficos y reportes, lo que añadió una capa de complejidad pero también permitió visualizar la información de manera efectiva.
+Una de las lecciones más importantes fue entender la importancia de la organización del código y cómo una estructura bien definida puede facilitar la escalabilidad y el mantenimiento del sistema. También aprendimos a trabajar con gráficos y reportes, lo que añadió una capa de complejidad pero también permitió visualizar la información de manera efectiva. Por ejemplo, se presentaron problemas al momento de codificar el diagrama de clases, por lo que fue necesario cambiar algunas relaciones de herencia, como la de estadística, generando una nueva clase que almacene métodos y atributos en común para que herede a las clases de estadísticas específicas. Para ello fue necesario tener presente el concepto de polimorfismo en java y la forma en que interactuan estas clases.
 
 En el futuro, nos gustaría agregar más funcionalidades, como la integración con bases de datos para la gestión de la información, la posibilidad de agregar más tipos de reportes o gráficos y la optimización de la generación de reportes en formatos más avanzados, como PDFs interactivos.
 
