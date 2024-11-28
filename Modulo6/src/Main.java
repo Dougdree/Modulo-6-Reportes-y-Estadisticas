@@ -19,11 +19,6 @@ public class Main {
         Factura factura = new Factura(1, 30.0f, 5.0f, 4.0f, "2024-11-26", productosFactura);
         factura.mostrarFactura();  // Mostrar la factura
 
-        // Creación de asignación (Ejemplo)
-        Date fechaAsignacion = new Date();  // Fecha actual
-        Asignacion asignacion = new Asignacion("A001", "Limpieza de la mesa 5", fechaAsignacion);
-        asignacion.mostrarAsignacion();  // Mostrar asignación
-
         // Crear estadísticas de mesas
         List<Factura> facturas = new ArrayList<>();
         facturas.add(factura);  // Agregar la factura creada a la lista de facturas

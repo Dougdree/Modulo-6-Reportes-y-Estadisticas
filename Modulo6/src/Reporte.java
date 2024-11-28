@@ -7,6 +7,7 @@ public class Reporte implements IReporte {
     private TipoReporte tipoReporte; // Tipo de reporte (Diario, Semanal, Mensual).
     private Grafico grafico;         // Gráfico asociado al reporte.
     private List<Estadistica> estadisticas; // Relación con Estadistica (*)
+    private List<Factura> facturas;
 
     // Constructor que inicializa el reporte con estadísticas.
     public Reporte(String titulo, TipoArchivo tipoArchivo, TipoReporte tipoReporte, Grafico grafico, List<Estadistica> estadisticas) {
@@ -15,6 +16,15 @@ public class Reporte implements IReporte {
         this.tipoReporte = tipoReporte;
         this.grafico = grafico;
         this.estadisticas = estadisticas; // Inicializa la relación.
+    }
+
+    // getter and setter de la relacion de Factura
+    public List<Factura> getFacturas() {
+        return facturas;
+    }
+
+    public void setFacturas(List<Factura> facturas) {
+        this.facturas = facturas;
     }
 
     // Getter y setter para estadisticas.
@@ -57,4 +67,5 @@ public class Reporte implements IReporte {
         }
     }
 }
+
 
