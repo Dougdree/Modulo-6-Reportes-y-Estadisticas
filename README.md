@@ -31,7 +31,7 @@ Las estadísticas se calculan en base a los datos generados durante las operacio
 ## Diagrama de Clases
 
 
-![Evaluación2](https://github.com/user-attachments/assets/b61f3161-c330-49e2-b7ab-81b48f81a17d)
+![image](https://github.com/user-attachments/assets/bc9c0411-2afb-46bc-89ea-0e7aae52154b)
 
 
 ## Estructura del proyecto
@@ -39,39 +39,37 @@ Las estadísticas se calculan en base a los datos generados durante las operacio
 El proyecto está compuesto por varias clases que interactúan entre sí para proporcionar la funcionalidad deseada. Entre las principales se incluyen:
 
 
-**1. [Asignación](Modulo6/src/Asignacion.java)**: Es una clase intermedia que permite realizar asignaciones entre los objetos de la clase Factura y la Interfaz IReporte
+**1. [Factura](Modulo6/src/Factura.java)**: Contiene la información general de la factura como un número para identificarla, los descuentos e impuestos aplicados, la fecha de emisión y monto total.
 
-**2. [Factura](Modulo6/src/Factura.java)**: Contiene la información general de la factura como un número para identificarla, los descuentos e impuestos aplicados, la fecha de emisión y monto total.
+**2. [ItemFactura](Modulo6/src/ItemFactura.java)**: Es una clase que compone a Factura, incluye la información de un producto individual contenido en la factura, como el subtotal a pagar y la cantidad de productos que se vendieron. Calcula el subtotal con y sin impuestos y permite imprimir dicho item.
 
-**3. [ItemFactura](Modulo6/src/ItemFactura.java)**: Es una clase que compone a Factura, incluye la información de un producto individual contenido en la factura, como el subtotal a pagar y la cantidad de productos que se vendieron. Calcula el subtotal con y sin impuestos y permite imprimir dicho item.
+**3. [Mesa](Modulo6/src/Mesa.java)**: Representa cada mesa que existe en el restaurante. Con esta clase se puede saber la cantidad de uso que una mesa ha tenido y hace uso de un código para identificarlas.
 
-**4. [Mesa](Modulo6/src/Mesa.java)**: Representa cada mesa que existe en el restaurante. Con esta clase se puede saber la cantidad de uso que una mesa ha tenido y hace uso de un código para identificarlas.
+**4. [Persona](Modulo6/src/Persona.java)**: Es una clase abstracta que permite establecer los atributos básicos como nombre e identificación que serán heredados a mesero.
 
-**5. [Persona](Modulo6/src/Persona.java)**: Es una clase abstracta que permite establecer los atributos básicos como nombre e identificación que serán heredados a mesero.
+**5. [Mesero](Modulo6/src/Mesero.java)**: Se trata de una clase para identificar a los trabajadores que se desempeñen como meseros en el restaurante. Proporciona información del número de pedidos que atendió cada mesero.
 
-**6. [Mesero](Modulo6/src/Mesero.java)**: Se trata de una clase para identificar a los trabajadores que se desempeñen como meseros en el restaurante. Proporciona información del número de pedidos que atendió cada mesero.
+**6. [Estadistica](Modulo6/src/Estadistica.java)**: Se trata de una clase abstracta que hereda a las clases EstadisticaMesa, EstadisticaMesero y EstadisticaProducto. 
 
-**7. [Estadistica](Modulo6/src/Estadistica.java)**: Se trata de una clase abstracta que hereda a las clases EstadisticaMesa, EstadisticaMesero y EstadisticaProducto. 
+**7. [EstadisticaMesa](Modulo6/src/EstadisticaMesa.java)**: Esta clase calcula la mesa más usada y almacena el código de dicha mesa en el atributo mesaMasUsada.
 
-**8. [EstadisticaMesa](Modulo6/src/EstadisticaMesa.java)**: Esta clase calcula la mesa más usada y almacena el código de dicha mesa en el atributo mesaMasUsada.
+**8. [EstadisticaMesero](Modulo6/src/EstadisticaMesero.java)**: Esta clase calcula el mejor mesero en base al número de pedidos atendidos, guarda el nombre de dicho empleado en el atributo mejorMesero.
 
-**9. [EstadisticaMesero](Modulo6/src/EstadisticaMesero.java)**: Esta clase calcula el mejor mesero en base al número de pedidos atendidos, guarda el nombre de dicho empleado en el atributo mejorMesero.
+**9. [EstadisticaProducto](Modulo6/src/EstadisticaProducto.java)**: Calcula el producto más vendido del restaurante.
 
-**10. [EstadisticaProducto](Modulo6/src/EstadisticaProducto.java)**: Calcula el producto más vendido del restaurante.
+**10. [Grafico](Modulo6/src/Grafico.java)**: Permite generar un gráfico de tipo pastel con un título referente a la información recibida de la clase Reporte.
 
-**11. [Grafico](Modulo6/src/Grafico.java)**: Permite generar un gráfico de tipo pastel con un título referente a la información recibida de la clase Reporte.
+**11. [IReporte](Modulo6/src/IReporte.java)**: Se trata de una Interface que integra los métodos para calcular las Ventas Totales, visualizar el reporte y exportar reporte. 
 
-**12. [IReporte](Modulo6/src/IReporte.java)**: Se trata de una Interface que integra los métodos para calcular las Ventas Totales, visualizar el reporte y exportar reporte. Interactua con la clase asignación para obtener los datos de las facturas.
+**12. [Main](Modulo6/src/Main.java)**: Contiene la configuración general del programa. Permite presentar en el terminal determinada información.
 
-**13. [Main](Modulo6/src/Main.java)**: Contiene la configuración general del programa. Permite presentar en el terminal determinada información.
+**13. [Producto](Modulo6/src/Producto.java)**: Contiene información más específica acerca del producto que se ha relacionado en la clase itemProducto, como nombre, precio y cantidad.
 
-**14. [Producto](Modulo6/src/Producto.java)**: Contiene información más específica acerca del producto que se ha relacionado en la clase itemProducto, como nombre, precio y cantidad.
+**14. [Reporte](Modulo6/src/Reporte.java)**: Esta clase implementa los métodos de la clase IReporte, pero permite generar reportes diarios, semanales o mensuales que estan implementados en un enumerador. Contiene un título y se relaciona con el gráfico generado en la clase Gráfico. Además, se puede exportar dependiendo del tipo de archivo que se especifica en un enumerador.Esta relacionada con la clase factura para generar estadísticas de ventas diarias, semanales y mensuales
 
-**15. [Reporte](Modulo6/src/Reporte.java)**: Esta clase implementa los métodos de la clase IReporte, pero permite generar reportes diarios, semanales o mensuales que estan implementados en un enumerador. Contiene un título y se relaciona con el gráfico generado en la clase Gráfico. Además, se puede exportar dependiendo del tipo de archivo que se especifica en un enumerador.
+**15. [TipoArchivo](Modulo6/src/TipoArchivo.java)**: Se trata de un enumerador que contiene los tipos de reportes que se pueden generar. Existen 3 atributos: diario, semanal y mensual.
 
-**16. [TipoArchivo](Modulo6/src/TipoArchivo.java)**: Se trata de un enumerador que contiene los tipos de reportes que se pueden generar. Existen 3 atributos: diario, semanal y mensual.
-
-**17. [TipoReporte](Modulo6/src/TipoReporte.java0)**: Es un enumerador que especifica el formato en el cual se desea exportar el Reporte. Contiene los atributos PDF e IMAGEN
+**16. [TipoReporte](Modulo6/src/TipoReporte.java0)**: Es un enumerador que especifica el formato en el cual se desea exportar el Reporte. Contiene los atributos PDF e IMAGEN
 
 
 
