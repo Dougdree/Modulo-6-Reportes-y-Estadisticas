@@ -1,5 +1,5 @@
 // Clase que representa a una Persona con nombre e identificación
-public class Persona {
+public abstract class Persona {
     // Atributos básicos de una persona
     private String nombre;  // Nombre de la persona
     private String identificacion;  // Identificación de la persona
