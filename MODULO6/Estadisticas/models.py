@@ -1,81 +1,81 @@
 from django.db import models
 
-class producto(models.Model):
+class Producto(models.Model):
     nombre = models.CharField(max_length=50)
     precio = models.FloatField()
     categoria = models.CharField(max_length=50)
-    cantidad= models.IntegerField(max_length=10)
+    cantidad= models.IntegerField()
 
     def __str__(self):
         return self.nombre
 
-class item_factura(models.Model):
-    subTotal = models.FloatField()
-    cantidad = models.IntegerField(max_length=10)
-    producto= models.foreighKey(producto, related_name='item_factura', on_delete=models.CASCADE)
+class Item_Factura(models.Model):
+    subtotal = models.FloatField()
+    cantidad = models.IntegerField()
+    producto= models.ForeignKey(Producto, related_name='item_factura', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.producto.nombre
 
-    def calcular_Subtotal(self):
+    def calcular_subtotal(self):
         return self.cantidad * self.producto.precio
 
-    def calcular_Total(self):
-        return self.subTotal
+    def calcular_total(self):
+        return self.subtotal
 
-class factura(models.Model):
+class Factura(models.Model):
     numero= models.CharField(max_length=20)
     fecha = models.DateField()
     impuesto= models.FloatField()
     descuento = models.FloatField()
     total = models.FloatField()
-    item_factura_list = models.foreighKey(item_factura, related_name='factura', on_delete=models.CASCADE)
+    item_factura_list = models.ForeignKey(Item_Factura, related_name='factura', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.numero
 
-    def calcular_Impuesto(self):
-        return self.item_factura_list.subtotal*0.12
+    def calcular_impuesto(self):
+        return Item_Factura.subtotal*0.12
 
-    def calcular_Descuento(self):
-        return self.item_factura_list.subtotal*0.05
+    def calcular_descuento(self):
+        return Item_Factura.subtotal*0.05
 
 
-class mesa(models.Model):
-    cantidad_uso = models.IntegerField(max_length=10)
+class Mesa(models.Model):
+    cantidad_uso = models.IntegerField()
     codigo = models.CharField(max_length=20)
 
     def __str__(self):
         return self.codigo
 
-class persona(models.Model):
+class Persona(models.Model):
     nombre = models.CharField(max_length=50)
     cedula = models.CharField(max_length=10)
 
     def __str__(self):
         return self.nombre
 
-class mesero(persona):
-    pedidosAtentidos = models.IntegerField(max_length=50)
+class Mesero(Persona):
+    pedidosAtentidos = models.IntegerField()
 
-    def Actualizar_PedidosAtendidos(self):
+    def actualizar_pedidos_atendidos(self):
         return self.pedidosAtentidos + 1
 
-class estadistica(models.Model):
+class Estadistica(models.Model):
     titulo= models.CharField(max_length=50)
 
-class estadistica_mesero(estadistica):
+class estadistica_mesero(Estadistica):
     mejor_mesero = models.CharField(max_length=50)
 
-class estadistica_mesa(estadistica):
+class estadistica_mesa(Estadistica):
     mesa_mas_usada = models.CharField(max_length=50)
 
-class estadistica_producto(estadistica):
+class estadistica_producto(Estadistica):
     producto_mas_vendido = models.CharField(max_length=50)
 
-class reporte(models.Model):
+class Reporte(models.Model):
     titulo = models.CharField(max_length=50)
     estadistica_list = models.CharField(max_length=200)
 
-class grafico(models.Model):
+class Grafico(models.Model):
     titulo = models.CharField(max_length=50)
