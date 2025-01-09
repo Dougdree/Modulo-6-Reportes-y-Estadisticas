@@ -17,9 +17,11 @@ class Item_Factura(models.Model):
         return self.producto.nombre
 
     def calcular_subtotal(self):
+        pass
         return self.cantidad * self.producto.precio
 
     def calcular_total(self):
+        pass
         return self.subtotal
 
 class Factura(models.Model):
@@ -34,9 +36,11 @@ class Factura(models.Model):
         return self.numero
 
     def calcular_impuesto(self):
+        pass
         return Item_Factura.subtotal*0.12
 
     def calcular_descuento(self):
+        pass
         return Item_Factura.subtotal*0.05
 
 
@@ -75,6 +79,15 @@ class estadistica_producto(Estadistica):
 class Reporte(models.Model):
     titulo = models.CharField(max_length=50)
     estadistica_list = models.CharField(max_length=200)
-
+    
+    class TipoReporte (models.Texs.choises):
+        DIARIO = "DIARIO"
+        SEMANAL = "SEMANAL"
+        MENSUAL = "MENSUAL"
+        
+    class TipoArchivo (models.text.choises):
+        PDF = "PDF"
+        IMAGEN = "IMAGEN"
+    
 class Grafico(models.Model):
     titulo = models.CharField(max_length=50)
