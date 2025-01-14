@@ -7,7 +7,7 @@ class Producto(models.Model):
     precio = models.FloatField()
     categoria = models.CharField(max_length=50)
 
-    def _str_(self):
+    def __str__(self):
         return self.nombre
 
     @staticmethod
@@ -22,7 +22,7 @@ class Item_Factura(models.Model):
     cantidad = models.IntegerField()
     producto = models.ForeignKey(Producto, related_name='item_factura', on_delete=models.CASCADE)
 
-    def _str_(self):
+    def __str__(self):
         return self.producto.nombre
 
     def calcular_subtotal(self):
@@ -44,7 +44,7 @@ class Factura(models.Model):
 
     item_factura_list = models.ForeignKey(Item_Factura, related_name='factura', on_delete=models.CASCADE)
 
-    def _str_(self):
+    def __str__(self):
         return self.numero
 
     def calcular_impuesto(self):
@@ -66,7 +66,7 @@ class Mesa(models.Model):
     cantidad_uso = models.IntegerField()
     codigo = models.CharField(max_length=20)
 
-    def _str_(self):
+    def __str__(self):
         return self.codigo
 
     @staticmethod
@@ -80,7 +80,7 @@ class Persona(models.Model):
     nombre = models.CharField(max_length=50)
     cedula = models.CharField(max_length=10)
 
-    def _str_(self):
+    def __str__(self):
         return self.nombre
 
 
@@ -107,6 +107,8 @@ class Mesero(Persona):
 # Clase base para todas las estadísticas
 class Estadistica(models.Model):
     titulo = models.CharField(max_length=50)
+    def __str__(self):
+        return self.titulo
 
     @staticmethod
     def obtener_estadistica_producto():
@@ -115,49 +117,35 @@ class Estadistica(models.Model):
 
     @staticmethod
     def obtener_estadistica_mesa():
-        Obtiene la mesa más utilizada
+        # Obtiene la mesa más utilizada
         return Mesa.obtener_mesa_mas_utilizada()
 
     @staticmethod
     def obtener_estadistica_mesero():
-        Obtiene el mejor mesero
+        # Obtiene el mejor mesero
         return Mesero.obtener_mejor_mesero()
 
 
 # Clases específicas de estadística
 class estadistica_mesero(Estadistica):
     mejor_mesero = models.CharField(max_length=50)
-    factura_list = models.ForeignKey(Factura, related_name='estadistica_mesero', on_delete=models.CASCADE, null=True)
+    factura_list = models.ManyToManyField(Factura, related_name='estadistica_mesero', blank=True)
 
-    #def generar_estadistica(self):
-        # Asignamos al mejor mesero
-        #mejor_mesero = self.obtener_estadistica_mesero()
-        #self.mejor_mesero = mejor_mesero.nombre
-        #self.save()
-
+    def __str__(self):
+        return self.titulo
 
 class estadistica_mesa(Estadistica):
     mesa_mas_usada = models.CharField(max_length=50)
-    factura_list = models.ForeignKey(Factura, related_name='estadistica_mesa', on_delete=models.CASCADE, null=True)
-
-    
-    #def generar_estadistica(self):
-        # Asignamos la mesa más utilizada
-        #mesa_mas_usada = self.obtener_estadistica_mesa()
-        #self.mesa_mas_usada = mesa_mas_usada.codigo
-        #self.save()
+    factura_list = models.ManyToManyField(Factura, related_name='estadistica_mesa', blank=True)
+    def __str__(self):
+        return self.titulo
 
 
 class estadistica_producto(Estadistica):
     producto_mas_vendido = models.CharField(max_length=50)
-    item_factura_list = models.ForeignKey(Item_Factura, related_name='estadistica_producto', on_delete=models.CASCADE, null=True)
-
-    #def generar_estadistica(self):
-        # Asignamos el producto más vendido
-        #producto_mas_vendido = self.obtener_estadistica_producto()
-        #self.producto_mas_vendido = producto_mas_vendido.nombre
-        #self.save()
-
+    item_factura_list = models.ManyToManyField(Item_Factura, related_name='estadistica_producto', blank=True)
+    def __str__(self):
+        return self.titulo
 
 # Modelo para Reporte
 class Reporte(models.Model):
@@ -175,22 +163,6 @@ class Reporte(models.Model):
         PDF = 'PDF'
         IMAGEN = 'IMAGEN'
 
-    def generar_reporte(self, tipo_reporte):
-        # Lógica para generar el reporte basado en el tipo
-        if tipo_reporte == self.TipoReporte.DIARIO:
-            # Generar reporte diario
-            self.estadistica_list = f"Producto más vendido: {self.obtener_estadistica_producto().nombre}, Mesa más usada: {self.obtener_estadistica_mesa().codigo}, Mejor mesero: {self.obtener_estadistica_mesero().nombre}"
-        elif tipo_reporte == self.TipoReporte.SEMANAL:
-            # Generar reporte semanal
-            pass
-        elif tipo_reporte == self.TipoReporte.MENSUAL:
-            # Generar reporte mensual
-            pass
-        self.save()
-
-    def obtener_reporte(self):
-        # Devuelve el reporte guardado
-        return self.estadistica_list
 
 
 # Modelo para Grafico (pendiente por detalles adicionales)
