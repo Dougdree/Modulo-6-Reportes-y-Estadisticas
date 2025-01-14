@@ -17,9 +17,11 @@ class Item_Factura(models.Model):
         return self.producto.nombre
 
     def calcular_subtotal(self):
+        pass
         return self.cantidad * self.producto.precio
 
     def calcular_total(self):
+        pass
         return self.subtotal
 
 class Factura(models.Model):
